@@ -1,8 +1,14 @@
 function setup(){
     noCanvas();
 
-// Pass an array of values to create a vector.
-tf.tensor([1, 2, 3, 4]).print();
 
+    const values = [];
+    for(let i = 0; i<30; i++){
+
+        values[i] = random(0,100)
+    }
+    const shape =[2,5,3]
+    const data = tf.tensor(values,shape);
+    console.log(data.toString());
 
 }
